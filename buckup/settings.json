@@ -1,0 +1,41 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "sh ~/.claude/statusline.sh"
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send 'Claude Code' 'Claude Code needs your attention'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send 'Claude Code' 'Task Completed'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/protect-files.sh"
+          }
+        ]
+      }
+    ],
+    "SessionStart": []
+  }
+}

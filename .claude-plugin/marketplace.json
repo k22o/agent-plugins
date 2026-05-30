@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "k22o-plugins",
+  "description": "k22o のプライベート Claude Code プラグイン集",
+  "owner": {
+    "name": "k22o"
+  },
+  "plugins": [
+    {
+      "name": "code-review",
+      "description": "コードレビュー・セキュリティレビュー・アクセシビリティレビューを行うスキル集",
+      "author": {
+        "name": "k22o"
+      },
+      "category": "development",
+      "source": "./code-review"
+    }
+  ]
+}
