@@ -1,0 +1,17 @@
+name: code-review
+version: 1.0.0
+description: コードレビュー・セキュリティレビュー・アクセシビリティレビューを行うスキル集
+author: k22o
+license: UNLICENSED
+# Which agent platforms to deploy to.
+# Resolution order: --target flag > this field > auto-detect from filesystem.
+# Accepted values: agent-skills, antigravity, claude, codex, copilot, cursor, gemini, kiro, opencode, windsurf
+targets:
+- claude
+dependencies:
+  apm: []
+  mcp: []
+includes: auto
+devDependencies:
+  apm: []
+scripts: {}

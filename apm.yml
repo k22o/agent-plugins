@@ -1,0 +1,32 @@
+name: k22o-plugins
+version: 1.0.0
+description: k22o のプライベート Claude Code プラグイン集
+license: UNLICENSED
+marketplace:
+  owner:
+    name: k22o
+    url: https://github.com/k22o
+
+  # Default tag pattern used to resolve version ranges for each package.
+  build:
+    tagPattern: "v{version}"
+
+  # Output targets (map form). 'claude' is enabled by default;
+  # uncomment 'codex' below to publish the Codex artifact too.
+  # Each output writes to its profile default path; add 'path:'
+  # under a key to override.
+  outputs:
+    claude: {}
+    # codex: {}
+    #
+    # Note: enabling codex requires every package below to declare
+    # 'category:' (e.g. category: Productivity).
+
+  # CI tip: build one or all formats with a machine-readable manifest:
+  #   apm pack --marketplace=claude,codex --json | jq -r '.marketplace.outputs[].path'
+
+  packages:
+    - name: code-review
+      description: コードレビュー・セキュリティレビュー・アクセシビリティレビューを行うスキル集
+      source: ./code-review
+      ref: c000157daf159414efafd43b205efeae78e5d974
