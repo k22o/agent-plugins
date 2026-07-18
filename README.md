@@ -1,7 +1,8 @@
-# claude-plugins
+# agent-plugins
 
-Claude Code プラグイン集。
-その他、claudeの設定に関するバックアップやai-codingの諸々を保存しておく。
+agent用のplugin集。
+
+その他、バックアップやai-codingの諸々を保存しておく。
 
 - TODO
     - agentの設定
@@ -17,22 +18,23 @@ Claude Code プラグイン集。
 
 ## インストール
 
-### 1. ローカルマーケットプレイスとして登録
+[APM (Agent Package Manager)](https://microsoft.github.io/apm/) 経由でインストールする。
 
-このリポジトリを Claude Code のマーケットプレイスとして一度だけ登録する。
+### 1. apm CLI をインストールする
 
 ```bash
-claude plugin marketplace add /mnt/c/Users/kanat/works/tools/claude-plugins
+curl -sSL https://aka.ms/apm-unix | sh
+apm --version
 ```
 
 ### 2. プラグインをインストール
 
 ```bash
-claude plugin install code-review
+apm install k22o/agent-plugins/code-review --target claude
 ```
 
 ### アンインストール
 
 ```bash
-claude plugin uninstall code-review
+apm uninstall code-review
 ```
