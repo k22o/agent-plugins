@@ -21,6 +21,8 @@ $ sudo apt install jq
 
 ### MCPの設定
 
+※ このレポジトリを使う場合は、apm installで解決されるので不要
+
 ```
 $ claude mcp add --transport http context7 https://mcp.context7.com/mcp
 $ claude mcp add chrome-devtools -- npx -y chrome-devtools-mcp@latest

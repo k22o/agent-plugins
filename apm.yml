@@ -2,6 +2,21 @@ name: k22o-plugins
 version: 1.0.0
 description: k22o のプライベート Claude Code プラグイン集
 license: UNLICENSED
+dependencies:
+  apm:
+    - ./code-review
+  mcp:
+    - name: context7
+      registry: false
+      transport: http
+      url: https://mcp.context7.com/mcp
+    - name: chrome-devtools
+      registry: false
+      transport: stdio
+      command: npx
+      args:
+        - -y
+        - chrome-devtools-mcp@latest
 marketplace:
   owner:
     name: k22o
