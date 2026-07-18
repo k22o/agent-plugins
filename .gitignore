@@ -1,0 +1,7 @@
+.claude
+
+# APM dependencies
+apm_modules/
+
+# APM pack artifacts (regenerate with `apm pack`)
+build/
